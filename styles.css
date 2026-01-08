@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #d4d4d4 0%, #e8e8e8 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.titulo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    background: #fff;
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px 30px;
+    border: none;
+    background: transparent;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #999;
+}
+
+.tab.active {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Dirección */
+.direccion {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.flecha {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Semáforo */
+.semaforo {
+    background: #fff;
+    border-radius: 40px;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.luz {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    opacity: 0.3;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.luz-roja {
+    background: radial-gradient(circle at 35% 35%, #ff6b6b, #ff4444, #d32f2f);
+}
+
+.luz-amarilla {
+    background: radial-gradient(circle at 35% 35%, #ffd93d, #ffaa00, #f57f17);
+}
+
+.luz-verde {
+    background: radial-gradient(circle at 35% 35%, #a3d855, #7cb342, #558b2f);
+}
+
+.luz.active {
+    opacity: 1;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.luz-roja.active {
+    box-shadow:
+        0 0 30px #ff4444,
+        0 0 60px #ff4444,
+        0 0 90px rgba(255, 68, 68, 0.8),
+        0 0 120px rgba(255, 68, 68, 0.6),
+        inset 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.luz-amarilla.active {
+    box-shadow:
+        0 0 30px #ffaa00,
+        0 0 60px #ffaa00,
+        0 0 90px rgba(255, 170, 0, 0.8),
+        0 0 120px rgba(255, 170, 0, 0.6),
+        inset 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.luz-verde.active {
+    box-shadow:
+        0 0 30px #7cb342,
+        0 0 60px #7cb342,
+        0 0 90px rgba(124, 179, 66, 0.8),
+        0 0 120px rgba(124, 179, 66, 0.6),
+        inset 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+}
+
+/* Tiempo restante */
+.tiempo-box {
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 25px 40px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tiempo-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.tiempo-valor {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Barra de progreso */
+.barra-progreso {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.barra-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7cb342 0%, #a3d855 100%);
+    border-radius: 10px;
+    width: 100%;
+    transition: width 1s linear;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 18px;
+    }
+
+    .semaforo {
+        padding: 25px 40px;
+    }
+
+    .luz {
+        width: 100px;
+        height: 100px;
+    }
+
+    .direccion {
+        font-size: 18px;
+    }
+
+    .tiempo-box {
+        padding: 20px 30px;
+    }
+}

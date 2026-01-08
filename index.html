@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo Arnedillo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">SEMÁFORO ARNEDILLO</h1>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button type="button" class="tab active" data-tab="entrada">Entrada</button>
+            <button type="button" class="tab" data-tab="salida">Salida</button>
+        </div>
+
+        <!-- Dirección -->
+        <div class="direccion">
+            <span>Arnedo</span>
+            <span class="flecha">→</span>
+            <span>Arnedillo</span>
+        </div>
+
+        <!-- Semáforo -->
+        <div class="semaforo">
+            <div class="luz luz-roja"></div>
+            <div class="luz luz-amarilla"></div>
+            <div class="luz luz-verde"></div>
+        </div>
+
+        <!-- Tiempo restante -->
+        <div class="tiempo-box">
+            <div class="tiempo-label">Tiempo restante:</div>
+            <div class="tiempo-valor" id="tiempoRestante">00:30 min</div>
+            <div class="barra-progreso">
+                <div class="barra-fill" id="barraProgreso"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
