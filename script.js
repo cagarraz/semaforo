@@ -6,10 +6,10 @@ let intervalId = null;
 let tabActiva = 'entrada';
 
 // Configuración del ciclo del semáforo (en segundos)
-const CICLO_COMPLETO = 660; // 11 minutos (590s verde + 67s rojo + 3s amarillo)
-const TIEMPO_VERDE = 590;   // 9 minutos 50 segundos
+const CICLO_COMPLETO = 660; // 11 minutos (67s verde + 3s amarillo + 590s rojo)
+const TIEMPO_VERDE = 67;    // 1 minuto 7 segundos
 const TIEMPO_AMARILLO = 3;  // 3 segundos
-const TIEMPO_ROJO = 67;     // 1 minuto 7 segundos
+const TIEMPO_ROJO = 590;    // 9 minutos 50 segundos
 
 // Horas de inicio cuando se puso en verde (guardadas en localStorage)
 let horaInicioEntrada = null;  // null = no configurado
