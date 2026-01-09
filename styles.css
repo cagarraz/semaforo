@@ -195,6 +195,108 @@ body {
     transition: width 1s linear;
 }
 
+/* Configuración de tiempos */
+.config-box {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 25px 30px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.config-titulo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.config-seccion {
+    margin-bottom: 20px;
+}
+
+.config-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.tiempo-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tiempo-inputs span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #666;
+}
+
+.tiempo-input {
+    width: 60px;
+    height: 45px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.tiempo-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.tiempo-input::placeholder {
+    color: #bbb;
+    font-weight: 400;
+}
+
+/* Quitar flechas de input number */
+.tiempo-input::-webkit-outer-spin-button,
+.tiempo-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tiempo-input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.btn-aplicar {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-aplicar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-aplicar:active {
+    transform: translateY(0);
+}
+
 /* Responsive */
 @media (max-width: 480px) {
     .titulo {
@@ -216,5 +318,19 @@ body {
 
     .tiempo-box {
         padding: 20px 30px;
+    }
+
+    .config-box {
+        padding: 20px 25px;
+    }
+
+    .tiempo-input {
+        width: 50px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .config-label {
+        font-size: 13px;
     }
 }

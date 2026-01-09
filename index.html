@@ -16,6 +16,37 @@
             <button type="button" class="tab" data-tab="salida">Salida</button>
         </div>
 
+        <!-- Configuración de tiempos -->
+        <div class="config-box">
+            <h3 class="config-titulo">¿A qué hora se puso en VERDE?</h3>
+
+            <!-- Entrada -->
+            <div class="config-seccion">
+                <div class="config-label">Entrada (Arnedo → Arnedillo):</div>
+                <div class="tiempo-inputs">
+                    <input type="number" id="entradaHoras" min="0" max="23" placeholder="HH" class="tiempo-input">
+                    <span>:</span>
+                    <input type="number" id="entradaMinutos" min="0" max="59" placeholder="MM" class="tiempo-input">
+                    <span>:</span>
+                    <input type="number" id="entradaSegundos" min="0" max="59" placeholder="SS" class="tiempo-input">
+                </div>
+            </div>
+
+            <!-- Salida -->
+            <div class="config-seccion">
+                <div class="config-label">Salida (Arnedillo → Arnedo):</div>
+                <div class="tiempo-inputs">
+                    <input type="number" id="salidaHoras" min="0" max="23" placeholder="HH" class="tiempo-input">
+                    <span>:</span>
+                    <input type="number" id="salidaMinutos" min="0" max="59" placeholder="MM" class="tiempo-input">
+                    <span>:</span>
+                    <input type="number" id="salidaSegundos" min="0" max="59" placeholder="SS" class="tiempo-input">
+                </div>
+            </div>
+
+            <button type="button" class="btn-aplicar" id="btnAplicar">Aplicar y Calcular</button>
+        </div>
+
         <!-- Dirección -->
         <div class="direccion">
             <span>Arnedo</span>
